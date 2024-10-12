@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio website of Pablo Bermudez-Canete, featuring education, work experience, activities, hobbies, and personal journey.">
+    <meta name="keywords" content="Pablo Bermudez-Canete, portfolio, Stanford, tech, kitesurfer, runner, symbolic systems">
+    <title>Pablo Bermudez-Canete Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #f5f5f5, #e8e8e8);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            padding: 50px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 15px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            background-color: #2575fc;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        nav a:hover {
+            background-color: #6a11cb;
+            transform: scale(1.1);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .section-title {
+            font-size: 2.5em;
+            color: #2575fc;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .education, .experience, .activities, .hobbies, .timeline {
+            margin-bottom: 60px;
+            border-radius: 15px;
+            padding: 30px;
+            background: #fff;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+        .hobbies {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .hobby {
+            flex: 1;
+            min-width: 200px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 10px;
+        }
+        .hobby:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background: linear-gradient(to right, #333, #444);
+            color: #fff;
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #2575fc;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .timeline-item {
+            padding: 20px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: #fff;
+            border: 4px solid #2575fc;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-item.left {
+            left: 0;
+        }
+        .timeline-item.right {
+            left: 50%;
+        }
+        .timeline-item-content {
+            padding: 20px;
+            background-color: #fff;
+            position: relative;
+            border-radius: 6px;
+        }
+        .timeline-item-content img {
+            width: 90%;
+            height: auto;
+            border-radius: 6px;
+        }
+        @media (max-width: 768px) {
+            .timeline-item {
+                width: 100%;
+                left: 0;
+            }
+            .timeline::after {
+                left: 20px;
+            }
+            .timeline-item::after {
+                left: 20px;
+                right: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pablo Bermudez-Canete</h1>
+        <p>Stanford | Tech | Kitesurfer | Runner | Cook</p>
+        <p>Dual citizen: Spain | USA</p>
+    </header>
+    <nav>
+        <a href="#education" aria-label="Navigate to Education section">Education</a>
+        <a href="#experience" aria-label="Navigate to Experience section">Experience</a>
+        <a href="#activities" aria-label="Navigate to Activities section">Activities</a>
+        <a href="#hobbies" aria-label="Navigate to Hobbies section">Hobbies</a>
+        <a href="#timeline" aria-label="Navigate to Journey section">Journey</a>
+    </nav>
+
+    <div class="container">
+        <section id="education" class="education">
+            <h2 class="section-title">Education</h2>
+            <p><strong>Stanford University, CA</strong> - B.S. Symbolic Systems in Mathematical Foundations, Class of 2027 (GPA: 3.8)</p>
+            <p><strong>American School of Barcelona</strong> - International Baccalaureate, Principal’s List (2018 - 2023)</p>
+            <p><strong>Boston College, MA</strong> - Summer Program, Economics (July - Aug. 2022)</p>
+            <p><strong>Brown University, RI</strong> - Summer Program, Laboratory Research in Biomedical Engineering (July - Aug. 2021)</p>
+        </section>
+
+        <section id="experience" class="experience">
+            <h2 class="section-title">Work Experience</h2>
+            <p><strong>Kibo Ventures, Madrid, Spain</strong> - Incoming Summer Intern at a Global Technology VC firm (July - Sept. 2024)</p>
+            <ul>
+                <li>Developed market research to assist the investment team in sourcing targets and trends</li>
+                <li>Performed financial modeling and conducted due diligence on potential targets</li>
+            </ul>
+            <p><strong>Enzyme Advising Group, Barcelona, Spain</strong> - Summer Intern at a Global Technology and Management Consulting firm (Sept. - Dec. 2022)</p>
+            <ul>
+                <li>Assisted marketing and sales teams with due diligence, research, and meetings</li>
+            </ul>
+            <p><strong>Professional Learning Program, Barcelona, Spain</strong> - Founder of PLP, NGO focused on first-time internships for high schoolers (Sept. 2021 - May 2023)</p>
+            <ul>
+                <li>Launched NGO and coordinated a team to obtain over 50 internships with social impact organizations</li>
+            </ul>
+        </section>
+
+        <section id="activities" class="activities">
+            <h2 class="section-title">Activities</h2>
+            <p><strong>Stanford Blockchain Club</strong> - Board member (2023 - 2024)</p>
+            <ul>
+                <li>Acquired advanced knowledge on DAO tooling, on-chain and off-chain voting mechanisms, scalable blockchain infrastructure, and the integration of AI in blockchain</li>
+            </ul>
+            <p><strong>Business Association of Stanford Entrepreneurial Students</strong> - Board member (2023 - 2024)</p>
+            <ul>
+                <li>Worked to create an inspiring ecosystem for Stanford founders; expanded network and maintained strong relationships with sponsors and industry connections</li>
+            </ul>
+        </section>
+
+        <section id="hobbies" class="hobbies">
+            <h2 class="section-title">Hobbies</h2>
+            <div class="hobby">
+                <h3>Kitesurfing</h3>
+                <p>Professional-level kitesurfer passionate about challenging winds and waves around the world.</p>
+            </div>
+            <div class="hobby">
+                <h3>Running</h3>
+                <p>Obsessed with long-distance running. Love running the Stanford dish every morning.</p>
+            </div>
+            <div class="hobby">
+                <h3>Cooking</h3>
+                <p>An aspiring cook with a love for experimenting with new recipes. Passing down my grandpa's recipes!</p>
+            </div>
+        </section>
+
+        <section id="timeline" class="timeline">
+            <h2 class="section-title">Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-item-content">
+                        <h3>Madrid</h3>
+                        <img src="images/madrid.jpg" alt="Madrid cityscape">
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-item-content">
+                        <h3>Malaga</h3>
+                        <img src="images/malaga.jpg" alt="Malaga coast">
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-item-content">
+                        <h3>London</h3>
+                        <img src="images/london.jpg" alt="London city view">
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-item-content">
+                        <h3>Bahrain</h3>
+                        <img src="images/bahrain.jpg" alt="Bahrain sunset">
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-item-content">
+                        <h3>Barcelona</h3>
+                        <img src="images/barcelona.jpg" alt="Barcelona city">
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-item-content">
+                        <h3>Palo Alto</h3>
+                        <img src="images/paloalto.jpg" alt="Palo Alto Stanford University">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Pablo Bermudez-Canete</p>
+        <p>Contact me: <a href="mailto:pbermud@stanford.edu">pbermud@stanford.edu</a></p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.hobby').forEach(hobby => {
+            hobby.addEventListener('click', () => {
+                const hobbyName = hobby.querySelector('h3').innerText;
+                const hobbyContent = hobby.querySelector('p').innerText;
+                const modal = document.createElement('div');
+                modal.classList.add('modal');
+                modal.innerHTML = `
+                    <div class="modal-content">
+                        <span class="close-button">&times;</span>
+                        <h2>${hobbyName}</h2>
+                        <p>${hobbyContent}</p>
+                    </div>
+                `;
+                document.body.appendChild(modal);
+                modal.style.display = 'block';
+
+                modal.querySelector('.close-button').addEventListener('click', () => {
+                    modal.style.display = 'none';
+                    document.body.removeChild(modal);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
